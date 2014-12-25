@@ -63,11 +63,24 @@
                     url: "http:106.187.101.193:9006/api/query?str=HYM",
 
                     type: "GET",
-
+                    
+                    success: function(json) {
+                    for (var i = 1; i < 10; i++) {
                     $(".main-list").append("<div class='list-box'>" +
                                            "<img src='' alt=''>" +
                                            "<div clas='list-info'>" +
                                            "<h3>" + json.data[i].name + "</h3>" +
-                                           "<span>xxxx</span>"+                                                  "<div class='list-detail'>"                                                                "<p>" + json.data[i].indication +"</p>" +                                                                                                                             "</d                                                                                                                                                      "</div>" +      "</div>");
+                                           "<span>xxxx</span>"+                                                                         "<div class='list-detail'>" +                                                                "<p>" + json.data[i].indication +"</p>" +                                                    "</div>" +                                                                                   "</div>" +     
+                                           "</div>");
+                    }
 
+                    },
+                    error: function(json) {
+                    console.log('gg');
+                    }
+            });
+        }
+
+        load_posts();
+    </script>
 </html>
