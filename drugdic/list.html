@@ -56,4 +56,18 @@
 	</section>
 </div>
 </body>
+
+    <script>
+        function load_posts() {
+            $.ajax({
+                    url: "http:106.187.101.193:9006/api/query?str=HYM",
+
+                    type: "GET",
+
+                    $(".main-list").append("<div class='list-box'>" +
+                                           "<img src='' alt=''>" +
+                                           "<div clas='list-info'>" +
+                                           "<h3>" + json.data[i].name + "</h3>" +
+                                           "<span>xxxx</span>"+                                                  "<div class='list-detail'>"                                                                "<p>" + json.data[i].indication +"</p>" +                                                                                                                             "</d                                                                                                                                                      "</div>" +      "</div>");
+
 </html>
